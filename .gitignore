@@ -48,8 +48,7 @@ Pods/
 .vscode/
 
 # XcodeGen (regeneratable)
-# Uncomment if you prefer to regenerate .xcodeproj each time:
-# *.xcodeproj
+*.xcodeproj
 
 # Secrets / environment
 .env

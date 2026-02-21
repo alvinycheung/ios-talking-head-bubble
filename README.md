@@ -46,7 +46,7 @@ That's the whole manual.
 
 ## Built By
 
-Made by [Alvin Cheung](https://alvincheung.com). Part of the [.fun](https://dotfun.co) family — where we skip the buzzwords and get straight to building things that work.
+Made by [Alvin Cheung](https://alvincheung.com). Part of the [dotfun](https://dotfun.co) family — where we skip the buzzwords and get straight to building things that work.
 
 ## License
 
