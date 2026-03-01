@@ -4,6 +4,12 @@ A tiny macOS app that floats your camera feed on screen as a draggable circle. T
 
 Pick your camera, drag the bubble wherever you want, scroll to resize. Right-click for options. Done.
 
+## Download
+
+Grab the latest release: [**TalkingHeadBubble.app.zip**](https://github.com/alvinycheung/osx-talking-head-bubble/releases/latest)
+
+> **Note:** The app is not notarized with an Apple Developer ID. After unzipping, right-click the app and select **Open** to bypass Gatekeeper on first launch.
+
 ## What It Does
 
 - **Floating camera bubble** — a circular preview of your face that stays on top of everything
