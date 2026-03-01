@@ -7,11 +7,18 @@ final class CameraManager: NSObject, @unchecked Sendable {
     let previewLayer: AVCaptureVideoPreviewLayer
 
     private(set) var currentDevice: AVCaptureDevice?
-    private(set) var isMirrored: Bool = true
+    private(set) var isMirrored: Bool
 
+    private static let mirrorKey = "isMirrored"
     private let sessionQueue = DispatchQueue(label: "com.talkingheadbubble.session")
 
     override init() {
+        let defaults = UserDefaults.standard
+        if defaults.object(forKey: CameraManager.mirrorKey) != nil {
+            isMirrored = defaults.bool(forKey: CameraManager.mirrorKey)
+        } else {
+            isMirrored = true
+        }
         session.sessionPreset = .medium
         previewLayer = AVCaptureVideoPreviewLayer(session: session)
         previewLayer.videoGravity = .resizeAspectFill
@@ -84,6 +91,7 @@ final class CameraManager: NSObject, @unchecked Sendable {
 
     func toggleMirror() {
         isMirrored.toggle()
+        UserDefaults.standard.set(isMirrored, forKey: CameraManager.mirrorKey)
         applyMirror()
     }
 
